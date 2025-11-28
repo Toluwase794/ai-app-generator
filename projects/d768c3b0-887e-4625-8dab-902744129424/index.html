@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>To-Do App with Categories & Dark Mode</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>To-Do App</h1>
+    <button id="toggle-dark-mode" aria-label="Toggle Dark Mode">🌙</button>
+  </header>
+
+  <section class="add-todo">
+    <input type="text" id="todo-input" placeholder="Add new to-do..." aria-label="New to-do text" />
+    <select id="category-select" aria-label="Select category">
+      <option value="General">General</option>
+      <option value="Work">Work</option>
+      <option value="Personal">Personal</option>
+      <option value="Shopping">Shopping</option>
+      <option value="Others">Others</option>
+    </select>
+    <button id="add-todo-btn">Add</button>
+  </section>
+
+  <section class="categories">
+    <button class="category-filter active" data-category="All">All</button>
+    <button class="category-filter" data-category="General">General</button>
+    <button class="category-filter" data-category="Work">Work</button>
+    <button class="category-filter" data-category="Personal">Personal</button>
+    <button class="category-filter" data-category="Shopping">Shopping</button>
+    <button class="category-filter" data-category="Others">Others</button>
+  </section>
+
+  <section class="todo-list" aria-live="polite" aria-label="To-do list">
+    <ul id="todos"></ul>
+  </section>
+
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f7f8;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: white;
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+.habit-input {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+#habit-name {
+  width: 250px;
+  padding: 10px 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+#habit-name:focus {
+  border-color: #3498db;
+}
+#add-habit-btn {
+  padding: 10px 18px;
+  font-size: 16px;
+  border: none;
+  background-color: #3498db;
+  color: white;
+  cursor: pointer;
+  border-radius: 0 4px 4px 0;
+  transition: background-color 0.3s ease;
+}
+#add-habit-btn:hover {
+  background-color: #2980b9;
+}
+.habit {
+  margin-bottom: 30px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 15px;
+}
+.habit-header {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.habit-header button {
+  background-color: #e74c3c;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+.habit-header button:hover {
+  background-color: #c0392b;
+}
+.weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+}
+.day {
+  background-color: #ecf0f1;
+  border-radius: 6px;
+  padding: 10px 5px;
+  text-align: center;
+  user-select: none;
+}
+.day-name {
+  font-weight: 600;
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #7f8c8d;
+}
+.checkbox-container {
+  display: flex;
+  justify-content: center;
+}
+.checkbox-container input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+@media (max-width: 600px) {
+  .weekdays {
+    grid-template-columns: repeat(7, 1fr);
+    gap: 6px;
+  }
+  .day {
+    padding: 8px 3px;
+  }
+  #habit-name {
+    width: 150px;
+  }
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Task Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Task Dashboard</h1>
+    <div id="task-summary">Total Tasks: 0 | Done: 0</div>
+  </header>
+  <div class="container">
+    <aside>
+      <h2>Filter by Status</h2>
+      <div class="filter-buttons">
+        <button data-status="all" class="active">All</button>
+        <button data-status="todo">To Do</button>
+        <button data-status="in progress">In Progress</button>
+        <button data-status="done">Done</button>
+      </div>
+    </aside>
+    <main>
+      <section id="today">
+        <h2>Today</h2>
+        <ul class="task-list"></ul>
+      </section>
+      <section id="this-week">
+        <h2>This Week</h2>
+        <ul class="task-list"></ul>
+      </section>
+      <section id="backlog">
+        <h2>Backlog</h2>
+        <ul class="task-list"></ul>
+      </section>
+    </main>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+/* Reset some default styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #222;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #eee;
+}
+
+.calculator {
+  background: #333;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #000000cc;
+  width: 320px;
+  max-width: 95vw;
+  display: flex;
+  flex-direction: column;
+  user-select: none;
+}
+
+.display {
+  background: #111;
+  padding: 20px 15px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  min-height: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  word-wrap: break-word;
+}
+
+.expression {
+  font-size: 1.1rem;
+  color: #bbb;
+  min-height: 22px;
+  max-height: 44px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.result {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+  min-height: 36px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  padding: 15px;
+  background: #222;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.btn {
+  background: #444;
+  border: none;
+  border-radius: 8px;
+  color: #eee;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 15px 0;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+
+.btn:hover {
+  background: #555;
+}
+
+.btn:active {
+  background: #666;
+}
+
+.btn.operator {
+  background: #ff9500;
+  color: #fff;
+}
+
+.btn.operator:hover {
+  background: #ffa733;
+}
+
+.btn.operator:active {
+  background: #cc7a00;
+}
+
+.btn.equal {
+  background: #007aff;
+  color: #fff;
+  grid-column: span 2;
+}
+
+.btn.equal:hover {
+  background: #3399ff;
+}
+
+.btn.equal:active {
+  background: #005ecb;
+}
+
+.btn.control {
+  background: #d32f2f;
+  color: #fff;
+}
+
+.btn.control:hover {
+  background: #e53935;
+}
+
+.btn.control:active {
+  background: #b71c1c;
+}
+
+.btn.function {
+  background: #555;
+  color: #ddd;
+}
+
+.btn.function:hover {
+  background: #666;
+}
+
+.btn.function:active {
+  background: #444;
+}
+
+.btn.constant {
+  background: #666;
+  color: #ddd;
+}
+
+.btn.constant:hover {
+  background: #777;
+}
+
+.btn.constant:active {
+  background: #555;
+}
+
+@media (max-width: 400px) {
+  .calculator {
+    width: 100%;
+  }
+  .btn {
+    font-size: 1rem;
+    padding: 12px 0;
+  }
+  .display {
+    padding: 15px 10px;
+  }
+  .result {
+    font-size: 1.5rem;
+  }
+}

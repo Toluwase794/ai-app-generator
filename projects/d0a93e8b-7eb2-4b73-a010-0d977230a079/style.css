@@ -1,0 +1,120 @@
+/* Reset some default styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #282c34;
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 10px;
+}
+
+.calculator {
+  background: #1e2127;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+#display {
+  background: #121417;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 2rem;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  text-align: right;
+  user-select: none;
+  height: 3.5rem;
+  overflow-x: auto;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+}
+
+.btn {
+  background: #2c313a;
+  border: none;
+  border-radius: 8px;
+  color: #ddd;
+  font-size: 1.25rem;
+  padding: 15px 0;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  user-select: none;
+}
+
+.btn:hover,
+.btn:focus {
+  background: #3a3f4a;
+  outline: none;
+}
+
+.btn.operator {
+  background: #ff9500;
+  color: white;
+  font-weight: 600;
+}
+
+.btn.operator:hover,
+.btn.operator:focus {
+  background: #e08900;
+}
+
+.btn.func {
+  background: #4a90e2;
+  color: white;
+  font-weight: 600;
+}
+
+.btn.func:hover,
+.btn.func:focus {
+  background: #357abd;
+}
+
+.btn.equal {
+  background: #28a745;
+  color: white;
+  font-weight: 700;
+  grid-column: span 2;
+}
+
+.btn.equal:hover,
+.btn.equal:focus {
+  background: #1e7e34;
+}
+
+.btn.clear {
+  background: #dc3545;
+  color: white;
+  font-weight: 700;
+}
+
+.btn.clear:hover,
+.btn.clear:focus {
+  background: #b02a37;
+}
+
+@media (max-width: 400px) {
+  #display {
+    font-size: 1.5rem;
+  }
+  .btn {
+    font-size: 1rem;
+    padding: 12px 0;
+  }
+}
